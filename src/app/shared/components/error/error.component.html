@@ -1,0 +1,16 @@
+@if ((control.touched || control.dirty) && control.errors) {
+  @if (control.hasError("required")) {
+    <p class="error">{{ "Required" }}</p>
+  }
+  @if (control.hasError("minlength")) {
+    <p class="error">
+      {{ "Min length: " }}{{ control.errors["minlength"]["requiredLength"] }}
+    </p>
+  }
+  @if (control.hasError("maxlength")) {
+    <p class="error">
+      {{ "Max length: " }}{{ control.errors["maxlength"]["requiredLength"] }}
+    </p>
+  }
+}
+

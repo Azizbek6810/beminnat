@@ -17,9 +17,9 @@ export class AppComponent {
   data: any[] = [1, 2, 3, 4, 5];
 
   constructor($auth: AuthService) {
-    $auth.signIn('test@gmail.com', '123456').subscribe((data) => {
-      console.log(data);
-      $auth.accessToken = 'test';
-    });
+    // $auth.signIn('test@gmail.com', '123456').subscribe((data) => {
+    //   console.log(data);
+    //   $auth.accessToken = 'test';
+    // });
   }
 }

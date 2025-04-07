@@ -1,0 +1,15 @@
+:host {
+  display: block;
+}
+
+.ng-invalid.ng-touched,
+.ng-invalid.ng-dirty{
+  border-color: red;
+}
+input{
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #999;
+  font-size: 16px;
+  outline: none;
+}

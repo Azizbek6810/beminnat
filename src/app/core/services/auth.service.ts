@@ -19,18 +19,17 @@ export class AuthService {
   constructor(
     private $base: BaseService,
     private http: HttpClient,
-    @Inject(DITokens.API_ENDPOINT) private endpoint: string
   ) {}
 
   signIn(email: string, password: string) {
-    return this.$base.post(`${this.endpoint}/api/auth/signin`, {
+    return this.$base.post(`auth/signin`, {
       email,
       password,
     });
   }
 
   signUp(email: string, password: string, username: string, birthdate: string) {
-    return this.$base.post(`${this.endpoint}/api/auth/signup`, {
+    return this.$base.post(`auth/signup`, {
       email,
       password,
       username,

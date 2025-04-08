@@ -1,25 +1,15 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { AuthService } from './core/services/auth.service';
-import { TranslocoPipe } from '@jsverse/transloco';
+import { RouterLink, RouterOutlet } from '@angular/router';
+import { NzIconModule } from 'ng-zorro-antd/icon';
+import { NzLayoutModule } from 'ng-zorro-antd/layout';
+import { NzMenuModule } from 'ng-zorro-antd/menu';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, TranslocoPipe],
+  imports: [RouterLink, RouterOutlet, NzIconModule, NzLayoutModule, NzMenuModule],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss',
+  styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'beminnat';
-
-  isAuthorized: boolean = true;
-  user: any;
-  data: any[] = [1, 2, 3, 4, 5];
-
-  constructor($auth: AuthService) {
-    // $auth.signIn('test@gmail.com', '123456').subscribe((data) => {
-    //   console.log(data);
-    //   $auth.accessToken = 'test';
-    // });
-  }
+  isCollapsed = false;
 }

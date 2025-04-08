@@ -11,6 +11,8 @@ import { DITokens } from './core/utils/di.tokens';
 import { environment } from '../environments/environment';
 import { TranslocoHttpLoader } from './transloco-loader';
 import { provideTransloco } from '@jsverse/transloco';
+import { icons } from './icons-provider';
+import { provideNzIcons } from 'ng-zorro-antd/icon';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -31,6 +33,6 @@ export const appConfig: ApplicationConfig = {
         prodMode: !isDevMode(),
       },
       loader: TranslocoHttpLoader,
-    }),
+    }), provideNzIcons(icons),
   ],
 };

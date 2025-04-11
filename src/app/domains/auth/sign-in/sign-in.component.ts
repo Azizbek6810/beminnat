@@ -3,7 +3,6 @@ import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import {
   FormBuilder,
   FormControl,
-  FormGroup,
   FormsModule,
   ReactiveFormsModule,
   Validators,
@@ -13,7 +12,7 @@ import { ErrorComponent } from '../../../shared/components/error/error.component
 @Component({
   selector: 'app-sign-in',
   standalone: true,
-  imports: [FormsModule, ReactiveFormsModule, JsonPipe, ErrorComponent],
+  imports: [FormsModule, ReactiveFormsModule, ErrorComponent],
   templateUrl: './sign-in.component.html',
   styleUrl: './sign-in.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush,

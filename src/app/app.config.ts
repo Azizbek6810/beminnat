@@ -1,7 +1,7 @@
 import {
   ApplicationConfig,
   provideZoneChangeDetection,
-  isDevMode,
+  isDevMode, importProvidersFrom,
 } from '@angular/core';
 import { provideRouter } from '@angular/router';
 
@@ -13,6 +13,13 @@ import { TranslocoHttpLoader } from './transloco-loader';
 import { provideTransloco } from '@jsverse/transloco';
 import { icons } from './icons-provider';
 import { provideNzIcons } from 'ng-zorro-antd/icon';
+import { ru_RU, provideNzI18n } from 'ng-zorro-antd/i18n';
+import { registerLocaleData } from '@angular/common';
+import ru from '@angular/common/locales/ru';
+import { FormsModule } from '@angular/forms';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+
+registerLocaleData(ru);
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -27,12 +34,12 @@ export const appConfig: ApplicationConfig = {
     provideTransloco({
       config: {
         availableLangs: ['en', 'uz', 'ru'],
-        defaultLang: 'uz',
+        defaultLang: 'ru',
         // Remove this option if your application doesn't support changing language in runtime.
         reRenderOnLangChange: true,
         prodMode: !isDevMode(),
       },
       loader: TranslocoHttpLoader,
-    }), provideNzIcons(icons),
+    }), provideNzIcons(icons), provideNzIcons(icons), provideNzI18n(ru_RU), importProvidersFrom(FormsModule), provideAnimationsAsync(), provideHttpClient(),
   ],
 };

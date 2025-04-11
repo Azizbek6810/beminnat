@@ -1,6 +1,24 @@
 import { Routes } from '@angular/router';
 
 export const routes: Routes = [
-  { path: '', pathMatch: 'full', redirectTo: '/welcome' },
-  { path: 'welcome', loadChildren: () => import('./pages/welcome/welcome.routes').then(m => m.WELCOME_ROUTES) }
+  {
+    path: '',
+    pathMatch: 'full',
+    redirectTo: 'admin',
+  },
+  {
+    path: 'client',
+    loadComponent: () =>
+      import('./domains/client/client.component').then(
+        (m) => m.ClientComponent,
+      ),
+  },
+  {
+    path: 'admin',
+    loadChildren: () => import('./domains/admin/admin.routes'),
+  },
+  {
+    path: 'sign-in',
+    loadComponent: () => import('./domains/auth/sign-in/sign-in.component'),
+  },
 ];

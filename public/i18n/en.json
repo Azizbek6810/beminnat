@@ -1,3 +1,8 @@
 {
-    "categories": "Categories"
+    "categories": "Categories",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "create": "Create"
 }

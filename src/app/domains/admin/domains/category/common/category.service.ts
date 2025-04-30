@@ -1,12 +1,29 @@
 import { Injectable, inject } from '@angular/core';
 import { BaseService } from '../../../../../core/services/base.service';
+import { Observable, map } from 'rxjs';
 import { CategoryResponse } from './category.model';
 
 @Injectable()
 export class CategoryService {
   private $base = inject(BaseService);
 
-  getCategory(){
-    return this.$base.get('category');
+  getCategories(){
+    return this.$base.get<CategoryResponse[]>('category');
+  }
+
+  updateCategory(id: number, data: any) {
+    return this.$base.put<CategoryResponse>(`category/${id}`, data);
+  }
+
+  createCategory(data: any) {
+    return this.$base.post<CategoryResponse>('category', data);
+  }
+
+  deleteCategory(id: number) {
+    return this.$base.delete<CategoryResponse>(`category/${id}`);
+  }
+
+  getCategoryDetail(id: number) {
+    return this.$base.get<CategoryResponse>(`category/${id}`);
   }
 }

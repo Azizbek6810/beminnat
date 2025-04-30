@@ -1,4 +1,8 @@
 {
-  "Header": "Yuqori qism",
-  "categories": "Kategoriyalar"
+  "categories": "Kategoriyalar",
+  "save": "Saqlash",
+  "cancel": "Bekor qilish",
+  "delete": "O'chirish",
+  "edit": "O'zgartirish",
+  "create": "Yaratish"
 }

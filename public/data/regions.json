@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "name": "Toshkent",
+    "code": 1
+  },
+  {
+    "id": 2,
+    "name": "Samarqand",
+    "code": 2
+  },
+  {
+    "id": 3,
+    "name": "Buxoro",
+    "code": 3
+  },
+  {
+    "id": 4,
+    "name": "Farg'ona",
+    "code": 4
+  },
+  {
+    "id": 5,
+    "name": "Andijon",
+    "code": 5
+  }
+]

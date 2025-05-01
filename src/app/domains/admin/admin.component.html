@@ -16,10 +16,10 @@
         <li nz-submenu nzOpen nzTitle="Dashboard" nzIcon="dashboard">
           <ul>
             <li nz-menu-item nzMatchRouter>
-              <a routerLink="category">{{'categories' | transloco}}</a>
+              <a [routerLink]="'category'">{{'categories' | transloco}}</a>
             </li>
             <li nz-menu-item nzMatchRouter>
-              <a>Monitor</a>
+              <a [routerLink]="'regions'">{{'regions' | transloco}}</a>
             </li>
             <li nz-menu-item nzMatchRouter>
               <a>Workplace</a>

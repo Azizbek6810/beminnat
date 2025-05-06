@@ -1,29 +1,26 @@
 import { Injectable, inject } from '@angular/core';
 import { BaseService } from '../../../../../core/services/base.service';
-import { Observable, map } from 'rxjs';
 import { CategoryResponse } from './category.model';
+import { GridService } from '../../../shared/grid/common/grid.service';
 
 @Injectable()
-export class CategoryService {
+export class CategoryService extends GridService {
   private $base = inject(BaseService);
 
-  getCategories(){
+  override getAll() {
     return this.$base.get<CategoryResponse[]>('category');
   }
 
-  updateCategory(id: number, data: any) {
+  override update(id: number, data: any) {
     return this.$base.put<CategoryResponse>(`category/${id}`, data);
   }
 
-  createCategory(data: any) {
+  override create(data: any) {
     return this.$base.post<CategoryResponse>('category', data);
   }
 
-  deleteCategory(id: number) {
+  override delete(id: number) {
     return this.$base.delete<CategoryResponse>(`category/${id}`);
   }
 
-  getCategoryDetail(id: number) {
-    return this.$base.get<CategoryResponse>(`category/${id}`);
-  }
 }

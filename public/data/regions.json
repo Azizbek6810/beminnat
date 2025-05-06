@@ -2,26 +2,61 @@
   {
     "id": 1,
     "name": "Toshkent",
-    "code": 1
+    "code": 1,
+    "country": {
+      "id": 1,
+      "name": "Uzbekistan",
+      "code": 101
+    }
   },
   {
     "id": 2,
     "name": "Samarqand",
-    "code": 2
+    "code": 2,
+    "country": {
+      "id": 1,
+      "name": "Uzbekistan",
+      "code": 101
+    }
   },
   {
     "id": 3,
     "name": "Buxoro",
-    "code": 3
+    "code": 3,
+    "country": {
+      "id": 1,
+      "name": "Uzbekistan",
+      "code": 101
+    }
   },
   {
     "id": 4,
     "name": "Farg'ona",
-    "code": 4
+    "code": 4,
+    "country": {
+      "id": 1,
+      "name": "Uzbekistan",
+      "code": 101
+    }
   },
   {
     "id": 5,
     "name": "Andijon",
-    "code": 5
+    "code": 5,
+    "country": {
+      "id": 1,
+      "name": "Uzbekistan",
+      "code": 101
+    }
+  },
+  {
+    "id": 6,
+    "name": "Xorazm",
+    "code": 6,
+    "country": {
+      "id": 1,
+      "name": "Uzbekistan",
+      "code": 101
+    }
   }
 ]

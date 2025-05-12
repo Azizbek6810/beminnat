@@ -48,4 +48,8 @@ export default class RegionsComponent {
       header: 'Country',
     },
   ];
+
+  navigated(event: any) {
+    console.log(event);
+  }
 }

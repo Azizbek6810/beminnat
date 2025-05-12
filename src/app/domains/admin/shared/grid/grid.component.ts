@@ -1,4 +1,11 @@
-import { Component, OnInit, inject, input, signal } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  inject,
+  input,
+  output,
+  signal,
+} from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { TranslocoPipe } from '@jsverse/transloco';
 import { NzButtonModule } from 'ng-zorro-antd/button';
@@ -28,7 +35,7 @@ import { DeepValuePipe } from '../../../../core/pipes/deep-value.pipe';
     ReactiveFormsModule,
     NzPopconfirmModule,
     DatePipe,
-    DeepValuePipe
+    DeepValuePipe,
   ],
   templateUrl: './grid.component.html',
   styleUrl: './grid.component.scss',
@@ -36,6 +43,7 @@ import { DeepValuePipe } from '../../../../core/pipes/deep-value.pipe';
 export class GridComponent implements OnInit {
   title = input.required<string>();
   columns = input.required<IColumn[]>();
+  navigated = output<any>();
 
   private $data = inject(GridService);
   // private $cdr = inject(ChangeDetectorRef);

@@ -1,5 +1,5 @@
 export interface IColumn {
   field: string;
   header: string;
-  type?: 'date' | 'image';
+  type?: 'date' | 'image' | 'template';
 }
